@@ -3,7 +3,7 @@ var wins = 0;
 var losses = 0;
 var targetNumber = 0;
 var counterNumber = 0;
-var gemValue = [10, 5, 3, 7];
+var gemValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var randGemValue = [];
 var gemsArray = ["assets/images/Gem_One.jpg", "assets/images/Gem_Two.jpg", "assets/images/Gem_Three.jpg" ,"assets/images/Gem_Four.jpg"]
 var crystals = $("#crystals");
@@ -16,7 +16,7 @@ function startGame() {
     randGemValue = [];
     
     
-    targetNumber = Math.floor(Math.random() * 61) + 40;
+    targetNumber = Math.floor(Math.random() * 101) + 19;
     $("#guess-number").text(targetNumber);
     $("#currentScore").text(counterNumber);
     getGemNumber();
