@@ -24,7 +24,6 @@ function startGame() {
 }
 
 // reset game function
-// relist variable to start on clean slate
 function resetGame() {
     targetNumber = 0;
     counterNumber = 0;
@@ -35,27 +34,24 @@ function resetGame() {
     console.log("reset game working");
 }
 
+// Get random numbers for each gem and assign the values to each image function
 function getGemNumber() {
     for (var i = 0; i < 4; i++) {
         randGemValue.push(gemValue[Math.floor(Math.random() * gemValue.length)]);
     }
     console.log(randGemValue);
-    for (var i = 0; i < gemValue.length; i++) {
-        var imageCrystal = $("<img>");
-        imageCrystal.addClass("crystal-image");
-        imageCrystal.attr("src", gemsArray[i]);
-        imageCrystal.attr("data-crystalvalue", randGemValue[i]);
-    
-        // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-        crystals.append(imageCrystal);
-     }
+
+    $('.gemOne').attr("data-crystalvalue", randGemValue[0]);
+    $('.gemTwo').attr("data-crystalvalue", randGemValue[1]);
+    $('.gemThree').attr("data-crystalvalue", randGemValue[2]);
+    $('.gemFour').attr("data-crystalvalue", randGemValue[3]);
 
 }
 
 startGame();
 
 // on click for each crystal
-crystals.on("click", ".crystal-image", function() {
+$(".crystal-box").on("click", function() {
 
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
