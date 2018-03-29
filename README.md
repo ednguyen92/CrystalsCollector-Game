@@ -1,6 +1,6 @@
 # CrystalsCollector-Game
 
-![homepage](assets/images/crystal_collectors.png)
+![homepage](assets/images/crystal_collectors.png = 250x250)
 
 Here's how the app works:
 
