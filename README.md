@@ -1,6 +1,6 @@
 # CrystalsCollector-Game
 
-The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of letters.
+![homepage](assets/images/crystal_collectors.png)
 
 Here's how the app works:
 
